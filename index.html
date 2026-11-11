@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>RAZA FOOD | Delicious Food & Easy Online Ordering</title>
+<meta name="description" content="Order delicious food from RAZA FOOD with a fast and convenient WhatsApp ordering experience.">
+<meta property="og:title" content="RAZA FOOD | Delicious Food & Easy Online Ordering"><meta property="og:description" content="Order delicious food from RAZA FOOD with a fast and convenient WhatsApp ordering experience."><meta property="og:type" content="website">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0e0d0c;--ink:#f3ede2;--mut:#a39b8d;--red:#ff3d14;--card:#1a1816;--ln:#34302b;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit;margin:0}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:500 16px/1.5 Manrope,system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3,.d{font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppercase;line-height:.92;letter-spacing:.005em}
+a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.btn{display:inline-block;background:var(--red);color:#fff;border:0;border-radius:99px;padding:.8em 1.5em;font-weight:800;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;transition:transform .25s,background .25s}
+.btn:hover{transform:translateY(-2px);background:#ff5a35}.btn.ghost{background:none;border:1.5px solid var(--ln)}.btn.ghost:hover{border-color:var(--ink);background:none}
+nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:16px clamp(16px,4vw,48px);transition:transform .4s,background .3s}
+nav.hide{transform:translateY(-110%)}nav.solid{background:rgba(14,13,12,.85);backdrop-filter:blur(10px)}
+.logo{font-family:Anton;font-size:1.4rem;letter-spacing:.04em}.logo i{color:var(--red);font-style:normal}
+nav .l{display:flex;gap:28px;font-size:.75rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+nav .l a{opacity:.7}nav .l a:hover{opacity:1}
+@media(max-width:760px){nav .l{display:none}}
+/* story */
+.track{height:600vh;position:relative}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;display:grid;place-items:center;background:radial-gradient(60% 50% at 78% 38%,rgba(255,110,20,.28),transparent 70%),radial-gradient(40% 40% at 15% 30%,rgba(255,140,40,.12),transparent 70%),#0e0d0c}
+.brick{position:absolute;inset:0;opacity:.07;background:repeating-linear-gradient(0deg,#fff 0 1px,transparent 1px 46px),repeating-linear-gradient(90deg,#fff 0 1px,transparent 1px 92px)}
+.counter{position:absolute;left:0;right:0;bottom:0;height:26vh;background:linear-gradient(#1b1714,#0e0d0c);border-top:1px solid var(--ln)}
+.words{position:absolute;left:clamp(16px,4vw,48px);bottom:clamp(90px,16vh,160px);z-index:3;max-width:90vw}
+.words h1,.words h2{font-size:clamp(3.4rem,13vw,12rem);position:absolute;bottom:0;left:0;white-space:nowrap;opacity:0;transform:translateY(40px);transition:.7s cubic-bezier(.2,.8,.2,1)}
+.words h1{position:relative;visibility:hidden}
+.words .on{opacity:1;transform:none}.words em{font-style:normal;color:var(--red)}
+.sub{position:absolute;right:clamp(16px,4vw,48px);bottom:clamp(24px,5vh,48px);z-index:3;display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+.lede{position:absolute;left:clamp(16px,4vw,48px);top:clamp(88px,14vh,130px);max-width:28ch;color:var(--mut);font-size:.95rem;z-index:3}
+#pz{position:absolute;width:clamp(240px,46vmin,560px);left:50%;top:38%;margin:-23vmin 0 0 -23vmin;will-change:transform;filter:drop-shadow(0 30px 40px rgba(0,0,0,.6))}
+@media(max-width:760px){#pz{left:50%;top:34%}}
+.prog{position:absolute;right:16px;top:50%;width:2px;height:90px;background:var(--ln);z-index:3}.prog b{display:block;width:100%;background:var(--red);height:0}
+/* order */
+section{position:relative}.pad{padding:clamp(72px,12vw,160px) clamp(16px,4vw,48px)}
+.order{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,5vw,72px);align-items:start;max-width:1300px;margin:auto}
+@media(max-width:900px){.order{grid-template-columns:1fr}}
+.order h2{font-size:clamp(3rem,9vw,8rem)}.order h2 em{font-style:normal;color:var(--red)}
+.tabs{display:flex;gap:8px;overflow-x:auto;margin:28px 0 8px;padding-bottom:6px;scrollbar-width:none}
+.tabs button{background:none;border:1.5px solid var(--ln);border-radius:99px;padding:.5em 1.1em;font-weight:800;font-size:.78rem;white-space:nowrap;transition:.2s}
+.tabs button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.item{display:grid;grid-template-columns:1fr auto auto;gap:16px;align-items:center;padding:18px 0;border-bottom:1px solid var(--ln);transition:padding .3s}
+.item:hover{padding-left:12px}.item h3{font-size:1.7rem}.item p{color:var(--mut);font-size:.88rem;margin-top:4px}
+.pr{font-family:Anton;font-size:1.3rem;color:var(--red)}
+.q{display:flex;align-items:center;gap:10px;border:1.5px solid var(--ln);border-radius:99px;padding:3px}
+.q button{width:34px;height:34px;border-radius:50%;border:0;background:var(--card);font-weight:800}.q button:hover{background:var(--red)}.q span{min-width:1.2ch;text-align:center;font-weight:800}
+.panel{position:sticky;top:84px;background:var(--card);border:1.5px solid var(--red);border-radius:28px;padding:26px;box-shadow:0 30px 80px rgba(255,61,20,.12)}
+.panel h3{font-size:2.2rem;margin-bottom:14px}.panel h3 em{font-style:normal;color:var(--red)}
+#lines{min-height:60px;font-size:.92rem;color:var(--mut)}#lines div{display:flex;justify-content:space-between;color:var(--ink);padding:3px 0}
+.tot{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--ln);margin:14px 0;padding-top:14px}.tot b{font-family:Anton;font-size:2rem;font-weight:400}
+input,textarea{width:100%;background:#0e0d0c;border:1.5px solid var(--ln);border-radius:14px;color:var(--ink);padding:.8em 1em;font:inherit;margin-bottom:10px}
+input:focus,textarea:focus{border-color:var(--red);outline:0}
+.err{color:#ff8a6b;font-size:.85rem;min-height:1.3em;margin-bottom:6px}
+.panel .btn{width:100%;padding:1.1em}
+/* ride */
+.night{background:linear-gradient(#150f2a,#3a1d3c 70%,#1a1018)}
+.night .stage{background:none}
+.moon{position:absolute;right:14%;top:22%;width:clamp(60px,10vw,130px);aspect-ratio:1;border-radius:50%;background:#ffb27a;box-shadow:0 0 120px 30px rgba(255,150,90,.35)}
+.city{position:absolute;left:0;right:0;bottom:22%;height:22vh;background:repeating-linear-gradient(90deg,#0b0713 0 38px,#120a1c 38px 70px,#0b0713 70px 120px);clip-path:polygon(0 40%,8% 40%,8% 10%,18% 10%,18% 55%,30% 55%,30% 0,42% 0,42% 35%,55% 35%,55% 15%,68% 15%,68% 50%,80% 50%,80% 5%,92% 5%,92% 30%,100% 30%,100% 100%,0 100%)}
+.road{position:absolute;left:0;right:0;bottom:0;height:22%;background:#0b0813;border-top:2px dashed #3d3350}
+.night h2{position:absolute;top:22%;left:0;right:0;text-align:center;font-size:clamp(3.4rem,13vw,11rem)}.night h2 em{font-style:normal;color:var(--red)}
+.eta{position:absolute;top:calc(22% + clamp(90px,15vw,180px));left:50%;transform:translateX(-50%);border:1px solid #ffffff33;border-radius:99px;padding:.4em 1.2em;font-weight:800;font-size:.8rem;letter-spacing:.1em}
+#sc{position:absolute;bottom:17%;left:0;font-size:clamp(64px,12vw,150px);line-height:1;transform:scaleX(-1);filter:drop-shadow(0 10px 10px #0008)}
+/* reviews */
+.rev{text-align:center;overflow:hidden;min-height:100vh;display:grid;align-content:center;gap:10px}
+.fan{position:relative;height:clamp(300px,48vw,480px);margin:0 auto;width:100%;max-width:1100px}
+.c{position:absolute;left:50%;top:0;width:clamp(120px,20vw,230px);aspect-ratio:3/4.2;margin-left:calc(clamp(120px,20vw,230px)/-2);background:#f3ede2;color:#111;border-radius:18px;padding:12px;text-align:left;transform-origin:50% 160%;transform:rotate(calc(var(--a)*var(--k,0)*1deg));box-shadow:0 20px 40px #0009;font-size:clamp(.62rem,1.2vw,.82rem);display:flex;flex-direction:column;justify-content:space-between}
+.c .im{flex:1;border-radius:10px;display:grid;place-items:center;font-size:clamp(34px,7vw,80px);margin-bottom:8px;background:var(--bg2)}
+.big{font-family:Anton;font-size:clamp(6rem,20vw,16rem);line-height:.9;color:var(--ink)}
+.stars{color:var(--red);letter-spacing:.2em}
+/* deals board */
+.board{background:#f3ede2;color:#141210}.board .in{max-width:900px;margin:auto}
+.board h2{font-size:clamp(3rem,9vw,7rem);margin-bottom:30px}.board h2 em{font-style:normal;color:var(--red)}
+.deal{display:grid;grid-template-columns:1fr auto auto;gap:18px;align-items:center;padding:20px 0;border-bottom:2px solid #141210}
+.deal h3{font-size:clamp(1.6rem,4vw,2.6rem)}.deal p{font-size:.9rem;color:#5b544a}.deal .pr{font-size:clamp(1.4rem,3vw,2.2rem)}
+@media(max-width:560px){.deal,.item{grid-template-columns:1fr auto}.deal .btn,.item .q{grid-column:1/-1;justify-self:start}}
+/* end */
+.end{text-align:center;display:grid;gap:26px;justify-items:center;min-height:100vh;align-content:center}
+.end h2{font-size:clamp(4rem,17vw,15rem)}.end .btns{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.about{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;border-top:1px solid var(--ln)}
+.about div{padding:24px 20px 24px 0}.about h3{font-size:1.8rem;margin-bottom:6px}.about p{color:var(--mut);font-size:.92rem}
+footer{border-top:1px solid var(--ln);padding:36px clamp(16px,4vw,48px);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:var(--mut);font-size:.85rem}footer nav{all:unset}
+footer a:hover{color:var(--ink)}
+.wa{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:25;box-shadow:0 10px 30px #0008}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style></head><body>
+<nav id="nav"><a class="logo" href="#top" aria-label="RAZA FOOD home">RAZA<i>●</i>FOOD</a>
+<div class="l"><a href="#top">Home</a><a href="#menu">Menu</a><a href="#about">About</a><a href="#specials">Specials</a><a href="#contact">Contact</a></div>
+<a class="btn" href="#menu">Order now</a></nav>
+
+<header class="track" id="top"><div class="stage">
+<div class="brick"></div><div class="counter"></div>
+<p class="lede">Fresh, hot and made to order. Pick your food, send it on WhatsApp, we confirm.</p>
+<svg id="pz" viewBox="0 0 200 200" role="img" aria-label="Pizza from RAZA FOOD"><defs><radialGradient id="g" cx=".4" cy=".35"><stop offset="0" stop-color="#f6c96a"/><stop offset="1" stop-color="#e8a43c"/></radialGradient></defs>
+<circle cx="100" cy="100" r="96" fill="#d99a4a"/><circle cx="100" cy="100" r="86" fill="#c9341d"/><circle id="ch" cx="100" cy="100" r="80" fill="url(#g)" opacity="0"/>
+<g id="tp" opacity="0" fill="#a4210f"><circle cx="70" cy="70" r="13"/><circle cx="125" cy="62" r="13"/><circle cx="145" cy="108" r="13"/><circle cx="105" cy="140" r="13"/><circle cx="58" cy="118" r="13"/><circle cx="100" cy="98" r="11"/></g>
+<g id="bs" opacity="0" fill="#2f8a3b"><ellipse cx="92" cy="72" rx="10" ry="6" transform="rotate(-30 92 72)"/><ellipse cx="128" cy="90" rx="10" ry="6" transform="rotate(40 128 90)"/><ellipse cx="80" cy="124" rx="10" ry="6" transform="rotate(20 80 124)"/><ellipse cx="118" cy="128" rx="10" ry="6" transform="rotate(-50 118 128)"/></g></svg>
+<div class="words" aria-live="polite"><h1>Raza Food</h1>
+<h2 class="on">Raza <em>Food.</em></h2><h2>No <em>shortcuts.</em></h2><h2>Stretched <em>thin.</em></h2><h2>Then it <em>flies.</em></h2><h2>Sauce. <em>Cheese.</em></h2><h2>Hot. <em>Yours.</em></h2></div>
+<div class="sub"><a class="btn" href="#menu">Order now</a><a class="btn ghost" href="#menu">Explore menu</a></div>
+<div class="prog"><b id="pg"></b></div>
+</div></header>
+
+<section class="pad" id="menu"><div class="order">
+<div><h2>Now it's <em>yours.</em></h2>
+<div class="tabs" id="tabs" role="tablist"></div><div id="items"></div></div>
+<aside class="panel" aria-label="Your order"><h3>Your <em>order.</em></h3><div id="lines">Nothing added yet.</div>
+<div class="tot"><span>Total</span><b id="tot">Rs 0</b></div>
+<input id="nm" placeholder="Your name" autocomplete="name"><input id="ph" placeholder="Phone number" inputmode="tel" autocomplete="tel"><input id="ad" placeholder="Delivery address" autocomplete="street-address"><textarea id="nt" rows="2" placeholder="Additional instructions"></textarea>
+<p class="err" id="err" role="alert"></p><button class="btn" id="send">Order on WhatsApp</button></aside></div></section>
+
+<section class="track night" style="height:260vh"><div class="stage"><div class="moon"></div><div class="city"></div><div class="road"></div>
+<h2>Or we <em>ride.</em></h2><div class="eta">DELIVERY · ETA <b id="eta">45</b> MIN</div><div id="sc" aria-hidden="true">🛵</div></div></section>
+
+<section class="pad rev"><div class="big">4.9</div><div class="stars">★★★★★</div><p style="color:var(--mut)">Loved by our customers</p>
+<div class="fan" id="fan"></div></section>
+
+<section class="pad board" id="specials"><div class="in"><h2>Today's <em>deals.</em></h2><div id="deals"></div></div></section>
+
+<section class="pad" id="about"><div style="max-width:1100px;margin:0 auto 40px"><h2 style="font-size:clamp(2.6rem,7vw,6rem)">Fresh in. <em style="font-style:normal;color:var(--red)">Fast out.</em></h2></div>
+<div class="about"><div><h3>Fresh ingredients</h3><p>Prepped the same day, never frozen.</p></div><div><h3>Real taste</h3><p>Cooked hot and made to order.</p></div><div><h3>Fast service</h3><p>Order in a minute, tracked to your door.</p></div><div><h3>Happy customers</h3><p>Not right? Tell us and we fix it.</p></div></div></section>
+
+<section class="pad end" id="contact"><h2>Hungry<br>again?</h2><div class="btns"><a class="btn" href="#menu">Order now</a><a class="btn ghost" href="https://wa.me/9213174278911" target="_blank" rel="noopener">WhatsApp +92 317 4278911</a><a class="btn ghost" href="tel:+9213174278911">Contact us</a></div></section>
+
+<footer><span class="logo">RAZA<i>●</i>FOOD</span><span><a href="#top">Home</a> &nbsp; <a href="#menu">Menu</a> &nbsp; <a href="#about">About</a> &nbsp; <a href="#specials">Special deals</a> &nbsp; <a href="#contact">Contact</a></span><span>WhatsApp +9213174278911</span><span>© 2026 RAZA FOOD</span></footer>
+<a class="btn wa" href="https://wa.me/9213174278911" target="_blank" rel="noopener">WhatsApp</a>
+
+<script>
+const NO="9213174278911",$=s=>document.querySelector(s),cl=(v,a=0,b=1)=>Math.min(b,Math.max(a,v));
+const M=[["Burgers","Smash Burger","Double patty, cheese, house sauce",690,"🍔"],["Burgers","Zinger Burger","Crispy chicken, slaw, spicy mayo",590,"🍔"],["Pizza","Fajita Pizza","Chicken fajita, peppers, mozzarella",1190,"🍕"],["Pizza","Pepperoni Pizza","Pepperoni, mozzarella, basil",1290,"🍕"],["Chicken","Broast (4 pcs)","Crunchy, juicy, hot",1050,"🍗"],["Chicken","Wings (8 pcs)","Hot or BBQ glaze",780,"🍗"],["Fries","Loaded Fries","Cheese sauce, jalapeño",490,"🍟"],["Fries","Masala Fries","Salted, spiced, crisp",290,"🍟"],["Sandwiches","Club Sandwich","Chicken, egg, cheese, toasted",650,"🥪"],["Sandwiches","Grilled Tikka Wrap","Tikka, onions, mint sauce",520,"🌯"],["Drinks","Mint Margarita","Fresh mint, lemon, ice",320,"🥤"],["Drinks","Cold Drink 500ml","Chilled",120,"🥤"]];
+const D=[["Family Deal","2 pizzas, 4 fries, 1.5L drink",3290],["Burger Deal","2 burgers, 2 fries, 2 drinks",1790],["Pizza Deal","Medium pizza, fries, drink",1590],["Chicken Deal","Broast, fries, 2 drinks",1490],["Combo Deal","Burger, fries, drink",990]];
+const cart={},cats=["Burgers","Pizza","Chicken","Fries","Sandwiches","Drinks"];let cat="Burgers";
+const all=[...M.map(m=>({n:m[1],p:m[3]})),...D.map(d=>({n:d[0],p:d[2]}))],P=n=>all.find(x=>x.n===n).p,fmt=n=>"Rs "+n.toLocaleString("en-PK");
+function tabs(){$("#tabs").innerHTML=cats.map(c=>`<button role="tab" class="${c==cat?"on":""}" data-c="${c}">${c}</button>`).join("");}
+function items(){$("#items").innerHTML=M.filter(m=>m[0]==cat).map(m=>`<div class="item"><div><h3>${m[4]} ${m[1]}</h3><p>${m[2]}</p></div><span class="pr">${fmt(m[3])}</span><div class="q"><button data-d="-1" data-n="${m[1]}" aria-label="Remove one ${m[1]}">−</button><span>${cart[m[1]]||0}</span><button data-d="1" data-n="${m[1]}" aria-label="Add one ${m[1]}">+</button></div></div>`).join("");}
+$("#deals").innerHTML=D.map(d=>`<div class="deal"><div><h3>${d[0]}</h3><p>${d[1]}</p></div><span class="pr">${fmt(d[2])}</span><button class="btn" data-d="1" data-n="${d[0]}" data-go="1">Order now</button></div>`).join("");
+function sum(){const k=Object.keys(cart).filter(n=>cart[n]>0);$("#lines").innerHTML=k.length?k.map(n=>`<div><span>${cart[n]} × ${n}</span><span>${fmt(cart[n]*P(n))}</span></div>`).join(""):"Nothing added yet.";$("#tot").textContent=fmt(k.reduce((s,n)=>s+cart[n]*P(n),0));}
+document.addEventListener("click",e=>{const t=e.target.closest("[data-c],[data-d]");if(!t)return;
+if(t.dataset.c){cat=t.dataset.c;tabs();items();return}
+const n=t.dataset.n;cart[n]=Math.max(0,(cart[n]||0)+ +t.dataset.d);items();sum();
+if(t.dataset.go)document.querySelector(".panel").scrollIntoView({behavior:"smooth",block:"center"});});
+$("#send").onclick=()=>{const k=Object.keys(cart).filter(n=>cart[n]>0),nm=$("#nm").value.trim(),ph=$("#ph").value.trim(),ad=$("#ad").value.trim(),er=$("#err");
+if(!k.length)return er.textContent="Add at least one item to your order.";if(!nm)return er.textContent="Enter your name.";if(!/^[+\d][\d\s-]{6,}$/.test(ph))return er.textContent="Enter a valid phone number.";if(ad.length<5)return er.textContent="Enter your delivery address.";er.textContent="";
+const tot=k.reduce((s,n)=>s+cart[n]*P(n),0),msg=`*New Food Order – RAZA FOOD*\n\n*Items:*\n${k.map(n=>`• ${cart[n]} × ${n} (${fmt(cart[n]*P(n))})`).join("\n")}\n\n*Total:* ${fmt(tot)}\n*Customer Name:* ${nm}\n*Phone:* ${ph}\n*Address:* ${ad}\n*Additional Instructions:* ${$("#nt").value.trim()||"None"}\n\nPlease confirm the order and total price.`;
+window.open(`https://wa.me/${NO}?text=${encodeURIComponent(msg)}`,"_blank");};
+tabs();items();sum();
+const R=[["Ayesha K.","🍕","#f7d9b0"],["Hamza R.","🍔","#f2c4b3"],["Sana M.","🍗","#f5e3a8"],["Bilal A.","🍟","#e6d3b6"],["Zara N.","🥪","#f2c4b3"]];
+$("#fan").innerHTML=R.map((r,i)=>`<div class="c" style="--a:${(i-2)*15};--bg2:${r[2]}"><div class="im">${r[1]}</div><b>${r[0]}</b><span class="stars" style="letter-spacing:.05em">★★★★★</span><span>Hot, fresh and on time.</span></div>`).join("");
+/* scroll engine */
+const W=[...document.querySelectorAll(".words h2")],pz=$("#pz"),nav=$("#nav"),still=matchMedia("(prefers-reduced-motion:reduce)").matches;let lastY=0,ci=-1;
+const prog=el=>{const r=el.getBoundingClientRect();return cl(-r.top/(r.height-innerHeight))};
+function tick(){const y=scrollY;nav.classList.toggle("hide",y>lastY&&y>200);nav.classList.toggle("solid",y>40);lastY=y;
+const h=$(".track"),p=still?.5:prog(h),i=Math.min(5,Math.floor(p*6));
+if(i!==ci){W.forEach((w,j)=>w.classList.toggle("on",j==i));ci=i}
+$("#pg").style.height=p*100+"%";
+const toss=Math.sin(cl(p*1.4-.2)*Math.PI);
+pz.style.transform=`translateY(${-toss*18}vh) rotate(${p*540}deg) scale(${.8+toss*.35+p*.15})`;
+$("#ch").style.opacity=cl((p-.3)*5);$("#tp").style.opacity=cl((p-.5)*6);$("#bs").style.opacity=cl((p-.7)*6);
+const n=document.querySelector(".night"),q=prog(n);$("#sc").style.left=(q*(innerWidth+300)-200)+"px";$("#eta").textContent=Math.max(3,Math.round(45-q*42));
+const f=$("#fan").getBoundingClientRect();$("#fan").style.setProperty("--k",cl(1.25-f.top/innerHeight*1.4).toFixed(3));
+for(const c of document.querySelectorAll(".c"))c.style.setProperty("--k",$("#fan").style.getPropertyValue("--k"));}
+addEventListener("scroll",()=>requestAnimationFrame(tick),{passive:true});addEventListener("resize",tick);tick();
+</script></body></html>
